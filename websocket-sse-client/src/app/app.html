@@ -1,0 +1,16 @@
+<p>Welcome to {{ title() }}!</p>
+
+<div>
+  <h3>Mensagens Recebidas:</h3>
+  <ul>
+    @for (msg of chatHistory(); track $index) {
+    <li [id]="$index">{{ msg }}</li>
+    }
+  </ul>
+
+  <input [(ngModel)]="newMessage" placeholder="Digite uma mensagem..." />
+  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+    (click)="acompanharMessages()">Acompanhar mensagens</button>
+  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" (click)="send()">Enviar</button>
+</div>
+<router-outlet />

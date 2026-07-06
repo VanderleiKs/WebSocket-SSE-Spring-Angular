@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-WebsocketApplication<websocket>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.demo.websocket.WebsocketApplication",
+      "projectName": "websocket",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
