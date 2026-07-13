@@ -1,0 +1,18 @@
+[
+  {
+    "label": "Spring Boot (Launch)",
+    "adapter": "Java",
+    "request": "launch",
+    "mainClass": "com.demo.websocket.WebsocketApplication",
+    "cwd": "$ZED_WORKTREE_ROOT/api",
+    "stopOnEntry": false
+  },
+  {
+    "label": "Node",
+    "adapter": "Node",
+    "request": "launch",
+    "cwd": "$ZED_WORKTREE_ROOT",
+    "build": "ng serve",
+    "stopOnEntry": false
+  }
+]

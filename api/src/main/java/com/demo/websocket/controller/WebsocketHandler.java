@@ -1,11 +1,8 @@
 package com.demo.websocket.controller;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.Random;
 import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.random.RandomGenerator;
-
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.CloseStatus;
