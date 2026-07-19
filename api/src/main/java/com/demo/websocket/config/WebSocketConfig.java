@@ -1,15 +1,13 @@
 package com.demo.websocket.config;
 
 import org.springframework.context.annotation.Configuration;
-import org.springframework.messaging.simp.config.MessageBrokerRegistry;
 import org.springframework.web.socket.config.annotation.EnableWebSocket;
-import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker;
-import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
 import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
 import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry;
-import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerConfigurer;
 
-import com.demo.websocket.controller.WebsocketHandler;
+import com.demo.websocket.WebsocketHandler;
+
+import lombok.RequiredArgsConstructor;
 
 //WEBSOCKET CONFIGURATION STOMP
 /* @Configuration
@@ -32,20 +30,20 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
         .setAllowedOriginPatterns("*");
   } */
 
-@Configuration
-@EnableWebSocket
-public class WebSocketConfig implements WebSocketConfigurer {
+//@Configuration
+//@EnableWebSocket
+public class WebSocketConfig {
 
-  private WebsocketHandler WebsocketHandler;
 
+ /* private WebsocketHandler websocketHandler;
   public WebSocketConfig(WebsocketHandler socket) {
-    this.WebsocketHandler = new WebsocketHandler();
+    this.websocketHandler = new WebsocketHandler();
   }
 
   @Override
   public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-    registry.addHandler(WebsocketHandler, "/ws-connect")
+    registry.addHandler(websocketHandler, "/ws-connect")
         .setAllowedOriginPatterns("*");
-  }
+  } */
 
 }

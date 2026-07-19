@@ -1,0 +1,8 @@
+[
+  {
+    "label": "Testar API - Criar Objeto (POST)",
+    "command": "curl -i -X POST http://localhost:8080/teste -H 'Content-Type: text/plain' --data-binary 'cuia'",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": true
+  }
+]

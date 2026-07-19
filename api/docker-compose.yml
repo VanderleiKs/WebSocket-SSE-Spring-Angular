@@ -14,8 +14,12 @@ services:
     #    tmpfs:
     #      size: 134217728 # 128*2^20 bytes = 128Mb
     environment:
-      POSTGRES_PASSWORD: example
+      POSTGRES_PASSWORD: postgres
       POSTGRES_USER: postgres
+      POSTGRES_DB: teste
+
+    ports:
+      - 5433:5432
 
     volumes:
       # ALTERADO: Agora aponta para a pasta física com permissão de escrita do Windows
@@ -28,14 +32,16 @@ services:
       - 8081:8080
 
    # 🌟 SEU APLICATIVO JAVA COM DOCKERFILE AUTOMÁTICO
-  app:
-    build:
-      context: .          # 1. DIZ ONDE PROCURAR: O ponto (.) significa "na pasta atual"
-      dockerfile: Dockerfile # 2. NOME DO ARQUIVO: Nome exato do seu arquivo de build
-    restart: always
-    ports:
-      - 8080:8080
+ # app:
+ #   build:
+ #     context: .          # 1. DIZ ONDE PROCURAR: O ponto (.) significa "na pasta atual"
+ #     dockerfile: Dockerfile # 2. NOME DO ARQUIVO: Nome exato do seu arquivo de build
+ #   restart: always
+ #   ports:
+ #     - 8080:8080
 
 # 2. Declara o volume no escopo global do arquivo
 volumes:
   pgdata:
+
+#docker run --rm <image> -> Auto remove
