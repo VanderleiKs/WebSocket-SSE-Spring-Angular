@@ -18,6 +18,7 @@
 **/*.iml
 **/*.ipr
 **/*.iws
+**/*.env
 
 # Maven wrapper
 **/.mvn/wrapper/maven-wrapper.jar
